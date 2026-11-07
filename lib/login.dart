@@ -16,20 +16,19 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Login Page"),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 41, 131, 221),
+        backgroundColor: const Color.fromARGB(255, 69, 32, 71),
         foregroundColor: Colors.white,
       ),
 
       body: Center(
         child: SingleChildScrollView(
           child: Container(
-            width: 330,
+            width: 530,
             padding: EdgeInsets.all(20),
-
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Colors.blue),
+              border: Border.all(color: const Color.fromARGB(255, 64, 45, 97)),
               boxShadow: [
                 BoxShadow(color: Colors.grey, blurRadius: 15, spreadRadius: 2),
               ],
@@ -38,18 +37,18 @@ class LoginPage extends StatelessWidget {
             child: Form(
               key: formKey,
               child: Column(
-                mainAxisSize: MainAxisSize.min,
+                
                 children: [
-                  Icon(Icons.login, size: 70, color: Colors.blue),
+                  Icon(Icons.person, size: 70, color: Colors.deepPurple),
 
                   SizedBox(height: 15),
 
                   Text(
-                    "Welcome Back!",
+                    "Log In",
                     style: TextStyle(
-                      fontSize: 26,
+                      fontSize: 36,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue,
+                      color: Colors.deepPurple,
                     ),
                   ),
 
@@ -122,7 +121,7 @@ class LoginPage extends StatelessWidget {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
+                        backgroundColor: Colors.deepPurple,
                         foregroundColor: Colors.white,
                       ),
                       child: Text("Login"),
