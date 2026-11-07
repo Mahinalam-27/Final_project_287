@@ -10,9 +10,9 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Welcome Page"),
+        title: Text("Hello"),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 41, 131, 221),
+        backgroundColor: const Color(0xFF673AB7),
         foregroundColor: Colors.white,
       ),
 
@@ -25,12 +25,12 @@ class Homepage extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.blue),
+            border: Border.all(color: Colors.deepPurple),
             boxShadow: [
               BoxShadow(
-                color: Colors.blue,
-                blurRadius: 15,
-                spreadRadius: 2,
+                color: Colors.deepPurple.shade100,
+                blurRadius: 12,
+                 spreadRadius: 2,
               ),
             ],
           ),
@@ -42,7 +42,7 @@ class Homepage extends StatelessWidget {
               Icon(
                 Icons.person,
                 size: 80,
-                color: Colors.blue,
+                color: Colors.deepPurple,
               ),
 
               SizedBox(height: 15),
@@ -50,7 +50,7 @@ class Homepage extends StatelessWidget {
               Text(
                 "Welcome!",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.deepPurple,
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                   
@@ -80,7 +80,7 @@ class Homepage extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Colors.deepPurple,
                     foregroundColor: Colors.white,
                   ),
                   child: Text("Login"),
@@ -99,8 +99,8 @@ class Homepage extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>RegistrationPage()));
                   },
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.blue,
-                    side: BorderSide(color: Colors.blue),
+                    foregroundColor: Colors.deepPurple,
+                    side: BorderSide(color: Colors.deepPurple),
                   ),
                   child: Text("Registration"),
                 ),
@@ -113,3 +113,4 @@ class Homepage extends StatelessWidget {
     );
   }
 }
+
