@@ -1,7 +1,6 @@
-
-import 'package:final_project_287_g/login.dart';
-import 'package:final_project_287_g/registration.dart';
 import 'package:flutter/material.dart';
+import 'login.dart';
+import 'registration.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -9,103 +8,121 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 228, 224, 213),
+
       appBar: AppBar(
-        title: Text("Hello"),
+        title: const Text("My Account"),
         centerTitle: true,
-        backgroundColor: const Color(0xFF673AB7),
+        backgroundColor: const Color.fromARGB(255, 29, 67, 71),
         foregroundColor: Colors.white,
       ),
-
       body: Center(
         child: Container(
-          height: 400,
-          width: 320,
-          padding: EdgeInsets.all(20),
-
+          width: 330,
+          padding: const EdgeInsets.all(25),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: const Color.fromARGB(255, 236, 232, 222),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.deepPurple),
+            border: Border.all(
+              color: const Color.fromARGB(255, 193, 166, 109),
+            ),
             boxShadow: [
               BoxShadow(
-                color: Colors.deepPurple.shade100,
-                blurRadius: 12,
-                 spreadRadius: 2,
+                color: const Color.fromARGB(255, 30, 69, 72),
+                blurRadius: 15,
+                spreadRadius: 2,
+                offset: const Offset(0, 5),
               ),
             ],
           ),
-
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 199, 208, 202),
+                  shape: BoxShape.circle,
+                ),
 
-              Icon(
-                Icons.person,
-                size: 80,
-                color: Colors.deepPurple,
-              ),
-
-              SizedBox(height: 15),
-
-              Text(
-                "Welcome!",
-                style: TextStyle(
-                  color: Colors.deepPurple,
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  
+                child: const Icon(
+                  Icons.account_circle,
+                  size: 75,
+                  color: Color.fromARGB(255, 29, 67, 70),
                 ),
               ),
-
-              SizedBox(height: 10),
-
-              Text(
-                "Please Login or Create an Account",
+              const SizedBox(height: 20),
+              const Text(
+                "Welcome!",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 31, 72, 75),
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "Your journey starts here.\nLogin or create an account to continue.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
-                  color: Colors.grey,
+                  color: Color.fromARGB(255, 105, 101, 93),
+                  height: 1.5,
                 ),
               ),
 
-              SizedBox(height: 28),
-
-              // Login Button
-
+              const SizedBox(height: 30),
               SizedBox(
-                height: 50,
                 width: double.infinity,
+                height: 50,
+
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginPage(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepPurple,
-                    foregroundColor: Colors.white,
+                    backgroundColor: const Color.fromARGB(255, 29, 66, 69),
+                    foregroundColor: const Color.fromARGB(255, 233, 226, 226),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
-                  child: Text("Login"),
+                  child: const Text("Login"),
                 ),
               ),
 
-              SizedBox(height: 20),
-
-              // Registration Button
+              const SizedBox(height: 15),
 
               SizedBox(
-                height: 50,
                 width: double.infinity,
+                height: 50,
                 child: OutlinedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>RegistrationPage()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RegistrationPage(),
+                      ),
+                    );
                   },
+
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.deepPurple,
-                    side: BorderSide(color: Colors.deepPurple),
+                    foregroundColor: const Color.fromARGB(255, 32, 75, 79),
+                    side: const BorderSide(
+                      color: Color.fromARGB(255, 38, 87, 92),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
-                  child: Text("Registration"),
+                  child: const Text("Create Account"),
                 ),
               ),
-
             ],
           ),
         ),
@@ -113,4 +130,3 @@ class Homepage extends StatelessWidget {
     );
   }
 }
-
